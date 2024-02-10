@@ -3,125 +3,229 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu - English Honours Restaurant</title>
+    <title>Pepper Palace</title>
     <style>
         body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f8f8f8;
-            color: #333;
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+            background-color: #f2f2f2;
+            color: #333;
         }
         header {
-            background-color: #e74c3c;
+            background-color: #222;
             color: #fff;
+            padding: 20px;
             text-align: center;
-            padding: 1.5rem; /* Increased padding for more space */
-            margin-bottom: 20px; /* Added margin to create space between title and content */
         }
-        section {
-            padding: 1rem;
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
         }
-        .menu {
-            display: flex;
-            flex-wrap: wrap;
-            margin-bottom: 70px; /* Adjusted margin for the WhatsApp button */
+        .welcome-section {
+            padding: 50px 20px;
+            text-align: center;
         }
-        .dish {
-            flex: 1;
-            padding: 10px;
-            border: 1px solid #ddd;
-            margin: 5px;
-            background-color: #fff;
-        }
-        button {
-            position: fixed;
-            bottom: 10px;
-            left: 50%;
-            transform: translateX(-50%);
-            padding: 10px;
-            background-color: #3498db;
+        .menu-button {
+            background-color: #f44336;
             color: #fff;
             border: none;
+            padding: 15px 30px;
+            font-size: 1em;
             cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
         }
-        /* Added a new class for the appreciation lines */
-        .appreciation-lines {
-            text-align: center;
-            margin-bottom: 20px;
-            font-style: italic;
+        .menu-button:hover {
+            background-color: #d32f2f;
+        }
+        .menu {
+            display: none;
+            padding: 20px;
+        }
+        .menu-category {
+            margin-bottom: 30px;
+        }
+        .menu-category h2 {
+            margin-top: 0;
+            font-size: 1.5em;
+            color: #f44336;
+        }
+        .menu-item {
+            list-style: none;
+            margin: 0;
+            padding: 10px 0;
+            border-bottom: 1px solid #ccc;
+            transition: background-color 0.3s ease;
+        }
+        .menu-item:last-child {
+            border-bottom: none;
+        }
+        .menu-item:hover {
+            background-color: #fafafa;
+        }
+        .menu-item img {
+            max-width: 100px;
+            display: block;
+            margin: auto;
+        }
+        .select-button {
+            margin-left: 10px;
+        }
+        #place-order-button {
+            display: block;
+            margin: 20px auto;
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.3s ease;
+        }
+        #place-order-button:hover {
+            background-color: #45a049;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Menu - English Honours Restaurant</h1>
-        <!-- Added appreciation lines -->
-        <div class="appreciation-lines">
-            <p>Indulge in the goodness of our dishes</p>
-            <p>Healthy, rich in protein, vitamins, and calcium</p>
-            <p>Nutrient-packed, tasty, and hygienic food</p>
-            <p>We craft non-veg and veg specialties with utmost care</p>
-        </div>
+        <h1>Welcome to Pepper Palace</h1>
     </header>
-    <section>
-        <div class="menu">
-            <div class="dish">
-                <h3>Butter Chicken</h3>
-                <p>Price: ₹120</p>
-                <p>Description: Creamy and flavorful curry made with tender chicken, butter, and aromatic spices.</p>
-            </div>
-            <div class="dish">
-                <h3>Biryani</h3>
-                <p>Price: ₹150</p>
-                <p>Description: Fragrant basmati rice cooked with aromatic spices and your choice of meat, creating a delightful blend of flavors.</p>
-            </div>
-            <div class="dish">
-                <h3>Dosa</h3>
-                <p>Price: ₹80</p>
-                <p>Description: Thin, crispy rice crepes filled with a spiced potato mixture, served with coconut chutney and tangy sambar.</p>
-            </div>
-            <div class="dish">
-                <h3>Butter Paneer</h3>
-                <p>Price: ₹110</p>
-                <p>Description: Soft paneer cubes in a rich and creamy tomato-based gravy.</p>
-            </div>
-            <div class="dish">
-                <h3>Garlic Naan</h3>
-                <p>Price: ₹45</p>
-                <p>Description: Fluffy Indian bread topped with garlic and butter.</p>
-            </div>
-            <div class="dish">
-                <h3>Coke</h3>
-                <p>Price: ₹30</p>
-                <p>Description: Refreshing carbonated beverage.</p>
-            </div>
-            <div class="dish">
-                <h3>White Sauce Pasta</h3>
-                <p>Price: ₹100</p>
-                <p>Description: Creamy pasta with a white sauce, loaded with vegetables.</p>
-            </div>
-            <div class="dish">
-                <h3>Red Sauce Pasta</h3>
-                <p>Price: ₹90</p>
-                <p>Description: Pasta cooked in a flavorful tomato-based sauce with herbs and spices.</p>
-            </div>
-            <div class="dish">
-                <h3>Chilli Potato</h3>
-                <p>Price: ₹80</p>
-                <p>Description: Crispy fried potatoes tossed in a spicy and tangy chilli sauce.</p>
-            </div>
-            <div class="dish">
-                <h3>Chilli Paneer</h3>
-                <p>Price: ₹110</p>
-                <p>Description: Paneer cubes stir-fried with bell peppers and onions in a spicy chilli sauce.</p>
-            </div>
+
+    <section class="welcome-section">
+        <p>Indulge in the exquisite flavors of our spicy delicacies.</p>
+        <button class="menu-button" onclick="toggleMenu()">Menu</button>
+    </section>
+
+    <section class="menu" id="menu">
+        <div class="menu-category">
+            <h2>Spicy</h2>
+            <ul>
+                <li class="menu-item">
+                    <input type="checkbox" id="spicy1" class="menu-checkbox">
+                    <label for="spicy1">
+                        <img src="https://images.app.goo.gl/pU7Q1cNoNbMCGmtG9" alt="Firecracker Shrimp">
+                        Firecracker Shrimp
+                    </label>
+                </li>
+                <li class="menu-item">
+                    <input type="checkbox" id="spicy2" class="menu-checkbox">
+                    <label for="spicy2">
+                        <img src="https://images.app.goo.gl/pU7Q1cNoNbMCGmtG9" alt="Volcano Wings">
+                        Volcano Wings
+                    </label>
+                </li>
+                <li class="menu-item">
+                    <input type="checkbox" id="spicy3" class="menu-checkbox">
+                    <label for="spicy3">
+                        <img src="https://images.app.goo.gl/pU7Q1cNoNbMCGmtG9" alt="Sizzling Szechuan Beef">
+                        Sizzling Szechuan Beef
+                    </label>
+                </li>
+            </ul>
+        </div>
+        <div class="menu-category">
+            <h2>Super Spicy</h2>
+            <ul>
+                <li class="menu-item">
+                    <input type="checkbox" id="superSpicy1" class="menu-checkbox">
+                    <label for="superSpicy1">
+                        <img src="https://images.app.goo.gl/QoA4qvKoXSYB8to5A" alt="Inferno Ramen">
+                        Inferno Ramen
+                    </label>
+                </li>
+                <li class="menu-item">
+                    <input type="checkbox" id="superSpicy2" class="menu-checkbox">
+                    <label for="superSpicy2">
+                        <img src="https://images.app.goo.gl/QoA4qvKoXSYB8to5A" alt="Ghost Pepper Chicken Tacos">
+                        Ghost Pepper Chicken Tacos
+                    </label>
+                </li>
+                <li class="menu-item">
+                    <input type="checkbox" id="superSpicy3" class="menu-checkbox">
+                    <label for="superSpicy3">
+                        <img src="https://images.app.goo.gl/QoA4qvKoXSYB8to5A" alt="Scorching Hot Curry">
+                        Scorching Hot Curry
+                    </label>
+                </li>
+            </ul>
+        </div>
+        <div class="menu-category">
+            <h2>Extreme Spicy</h2>
+            <ul>
+                <li class="menu-item">
+                    <input type="checkbox" id="extremeSpicy1" class="menu-checkbox">
+                    <label for="extremeSpicy1">
+                        <img src="https://images.app.goo.gl/aSjsi6PBW9P591z27" alt="Hellfire Burger">
+                        Hellfire Burger
+                    </label>
+                </li>
+                <li class="menu-item">
+                    <input type="checkbox" id="extremeSpicy2" class="menu-checkbox">
+                    <label for="extremeSpicy2">
+                        <img src="https://images.app.goo.gl/aSjsi6PBW9P591z27" alt="Devil's Breath Pizza">
+                        Devil's Breath Pizza
+                    </label>
+                </li>
+                <li class="menu-item">
+                    <input type="checkbox" id="extremeSpicy3" class="menu-checkbox">
+                    <label for="extremeSpicy3">
+                        <img src="https://images.app.goo.gl/aSjsi6PBW9P591z27" alt="Lava Lurker's Chili">
+                        Lava Lurker's Chili
+                    </label>
+                </li>
+            </ul>
+        </div>
+        <div class="menu-category">
+            <h2>Desserts</h2>
+            <ul>
+                <li class="menu-item">
+                    <input type="checkbox" id="dessert1" class="menu-checkbox">
+                    <label for="dessert1">
+                        <img src="https://images.app.goo.gl/hf3jjMdQ4zRVrHMd8" alt="Gulab Jamun">
+                        Gulab Jamun
+                    </label>
+                </li>
+                <li class="menu-item">
+                    <input type="checkbox" id="dessert2" class="menu-checkbox">
+                    <label for="dessert2">
+                        <img src="https://images.app.goo.gl/hf3jjMdQ4zRVrHMd8" alt="Sticky Toffee Pudding">
+                        Sticky Toffee Pudding
+                    </label>
+                </li>
+                <li class="menu-item">
+                    <input type="checkbox" id="dessert3" class="menu-checkbox">
+                    <label for="dessert3">
+                        <img src="https://images.app.goo.gl/hf3jjMdQ4zRVrHMd8" alt="Eton Mess">
+                        Eton Mess
+                    </label>
+                </li>
+            </ul>
         </div>
     </section>
-    <button onclick="openWhatsApp()">Message on WhatsApp</button>
+
+    <button id="place-order-button" onclick="placeOrder()">Place Order</button>
+
     <script>
-        function openWhatsApp() {
-            window.open('https://api.whatsapp.com/send?phone=918178565494&text=You%20can%20give%20your%20feedback%20here', '_blank');
+        function toggleMenu() {
+            var menu = document.getElementById("menu");
+            if (menu.style.display === "block") {
+                menu.style.display = "none";
+            } else {
+                menu.style.display = "block";
+            }
+        }
+
+        function placeOrder() {
+            var selectedItems = document.querySelectorAll('.menu-checkbox:checked');
+            var orderMessage = "Order:\n";
+            selectedItems.forEach(function(item) {
+                orderMessage += "- " + item.nextSibling.textContent.trim() + "\n";
+            });
+            var whatsappURL = "https://wa.me/8178565494?text=" + encodeURIComponent(orderMessage);
+            window.open(whatsappURL, "_blank");
         }
     </script>
 </body>
