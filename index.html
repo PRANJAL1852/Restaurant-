@@ -3,230 +3,166 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pepper Palace</title>
+    <title>Restaurant Homepage</title>
     <style>
+        /* Add your CSS styles here */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f2f2f2;
-            color: #333;
+            background-color: #f0f0f0; /* Default background color */
+            animation: changeColor 5s infinite alternate; /* Animation for changing background color */
         }
-        header {
-            background-color: #222;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
+
+        @keyframes changeColor {
+            0% { background-color: #f0f0f0; }
+            50% { background-color: #ffcc00; }
+            100% { background-color: #f0f0f0; }
         }
-        h1 {
-            margin: 0;
-            font-size: 2.5em;
-        }
-        .welcome-section {
-            padding: 50px 20px;
-            text-align: center;
-        }
-        .menu-button {
-            background-color: #f44336;
-            color: #fff;
-            border: none;
-            padding: 15px 30px;
-            font-size: 1em;
-            cursor: pointer;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
-        .menu-button:hover {
-            background-color: #d32f2f;
-        }
-        .menu {
-            display: none;
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
             padding: 20px;
         }
-        .menu-category {
-            margin-bottom: 30px;
+
+        .search-bar {
+            text-align: center;
+            margin-bottom: 20px;
         }
-        .menu-category h2 {
-            margin-top: 0;
-            font-size: 1.5em;
-            color: #f44336;
+
+        .items {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
         }
-        .menu-item {
-            list-style: none;
-            margin: 0;
-            padding: 10px 0;
-            border-bottom: 1px solid #ccc;
-            transition: background-color 0.3s ease;
+
+        .item {
+            flex-basis: 200px;
+            margin: 10px;
+            text-align: center;
         }
-        .menu-item:last-child {
-            border-bottom: none;
+
+        .item img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
         }
-        .menu-item:hover {
-            background-color: #fafafa;
-        }
-        .menu-item img {
-            max-width: 100px;
-            display: block;
-            margin: auto;
-        }
-        .select-button {
-            margin-left: 10px;
-        }
-        #place-order-button {
-            display: block;
-            margin: 20px auto;
-            background-color: #4CAF50;
-            color: white;
-            padding: 15px 30px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 1em;
-            transition: background-color 0.3s ease;
-        }
-        #place-order-button:hover {
-            background-color: #45a049;
+
+        .item-name {
+            margin-top: 5px;
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Welcome to Pepper Palace</h1>
-    </header>
-
-    <section class="welcome-section">
-        <p>Indulge in the exquisite flavors of our spicy delicacies.</p>
-        <button class="menu-button" onclick="toggleMenu()">Menu</button>
-    </section>
-
-    <section class="menu" id="menu">
-        <div class="menu-category">
-            <h2>Spicy</h2>
-            <ul>
-                <li class="menu-item">
-                    <input type="checkbox" id="spicy1" class="menu-checkbox">
-                    <label for="spicy1">
-                        <img src="https://images.app.goo.gl/pU7Q1cNoNbMCGmtG9" alt="Firecracker Shrimp">
-                        Firecracker Shrimp
-                    </label>
-                </li>
-                <li class="menu-item">
-                    <input type="checkbox" id="spicy2" class="menu-checkbox">
-                    <label for="spicy2">
-                        <img src="https://images.app.goo.gl/pU7Q1cNoNbMCGmtG9" alt="Volcano Wings">
-                        Volcano Wings
-                    </label>
-                </li>
-                <li class="menu-item">
-                    <input type="checkbox" id="spicy3" class="menu-checkbox">
-                    <label for="spicy3">
-                        <img src="https://images.app.goo.gl/pU7Q1cNoNbMCGmtG9" alt="Sizzling Szechuan Beef">
-                        Sizzling Szechuan Beef
-                    </label>
-                </li>
-            </ul>
+    <div class="container">
+        <div class="search-bar">
+            <input type="text" placeholder="Search...">
         </div>
-        <div class="menu-category">
-            <h2>Super Spicy</h2>
-            <ul>
-                <li class="menu-item">
-                    <input type="checkbox" id="superSpicy1" class="menu-checkbox">
-                    <label for="superSpicy1">
-                        <img src="https://images.app.goo.gl/QoA4qvKoXSYB8to5A" alt="Inferno Ramen">
-                        Inferno Ramen
-                    </label>
-                </li>
-                <li class="menu-item">
-                    <input type="checkbox" id="superSpicy2" class="menu-checkbox">
-                    <label for="superSpicy2">
-                        <img src="https://images.app.goo.gl/QoA4qvKoXSYB8to5A" alt="Ghost Pepper Chicken Tacos">
-                        Ghost Pepper Chicken Tacos
-                    </label>
-                </li>
-                <li class="menu-item">
-                    <input type="checkbox" id="superSpicy3" class="menu-checkbox">
-                    <label for="superSpicy3">
-                        <img src="https://images.app.goo.gl/QoA4qvKoXSYB8to5A" alt="Scorching Hot Curry">
-                        Scorching Hot Curry
-                    </label>
-                </li>
-            </ul>
+        <div class="items">
+            <div class="item">
+                <img src="Screenshot_2024-04-02-09-18-42-87_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" alt="Cheese Cake">
+                <div class="item-name">Cheese Cake</div>
+            </div>
+            <div class="item">
+                <img src="Screenshot_2024-04-02-09-19-32-33_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" alt="Chocolate Shake">
+                <div class="item-name">Chocolate Shake</div>
+            </div>
+            <div class="item">
+                <img src="Screenshot_2024-04-02-09-20-42-58_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" alt="Double Cheese Burger">
+                <div class="item-name">Double Cheese Burger</div>
+            </div>
+            <div class="item">
+                <img src="Screenshot_2024-04-02-09-21-56-81_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" alt="Double Cheese Pizza">
+                <div class="item-name">Double Cheese Pizza</div>
+            </div>
+            <div class="item">
+                <img src="Screenshot_2024-04-02-09-23-46-89_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" alt="Special Vanilla Ice Cream">
+                <div class="item-name">Special Vanilla Ice Cream</div>
+            </div>
+            <div class="item">
+                <img src="Screenshot_2024-04-02-09-24-35-13_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" alt="Butter Naan">
+                <div class="item-name">Butter Naan</div>
+            </div>
+            <div class="item">
+                <img src="Screenshot_2024-04-02-09-25-02-55_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" alt="Tandoori Naan">
+                <div class="item-name">Tandoori Naan</div>
+            </div>
+            <div class="item">
+                <img src="Screenshot_2024-04-02-09-26-18-42_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" alt="Special Cheese French Fries">
+                <div class="item-name">Special Cheese French Fries</div>
+            </div>
+            <div class="item">
+                <img src="Screenshot_2024-04-02-09-27-03-89_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" alt="French Fries">
+                <div class="item-name">French Fries</div>
+            </div>
+            <div class="item">
+                <img src="Screenshot_2024-04-02-09-27-33-03_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" alt="Veg Noodles">
+                <div class="item-name">Veg Noodles</div>
+            </div>
+            <div class="item">
+                <img src="Screenshot_2024-04-02-09-28-18-57_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" alt="Hakka Noodles">
+                <div class="item-name">Hakka Noodles</div>
+            </div>
+            <div class="item">
+                <img src="Screenshot_2024-04-02-09-29-21-77_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" alt="Chilli Potato">
+                <div class="item-name">Chilli Potato</div>
+            </div>
+            <div class="item">
+                <img src="Screenshot_2024-04-02-09-29-56-04_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" alt="Special Chilli Cheese Potato">
+                <div class="item-name">Special Chilli Cheese Potato</div>
+            </div>
+            <div class="item">
+                <img src="Screenshot_2024-04-02-09-30-31-45_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" alt="Strawberry Milkshake">
+                <div class="item-name">Strawberry Milkshake</div>
+            </div>
+            <div class="item">
+                <img src="Screenshot_2024-04-02-09-31-11-79_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" alt="Banana Milkshake">
+                <div class="item-name">Banana Milkshake</div>
+            </div>
+            <div class="item">
+                <img src="Screenshot_2024-04-02-09-31-40-98_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" alt="Lemonade">
+                <div class="item-name">Lemonade</div>
+            </div>
+            <div class="item">
+                <img src="Screenshot_2024-04-02-09-32-07-06_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" alt="Veg Kebab">
+                <div class="item-name">Veg Kebab</div>
+            </div>
+            <div class="item">
+                <img src="Screenshot_2024-04-02-09-33-04-61_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" alt="Special Kebab">
+                <div class="item-name">Special Kebab</div>
+            </div>
+            <div class="item">
+                <img src="Screenshot_2024-04-02-09-34-16-52_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" alt="Special Veg Pattie">
+                <div class="item-name">Special Veg Pattie</div>
+            </div>
+            <div class="item">
+                <img src="Screenshot_2024-04-02-09-35-09-83_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" alt="Most Special Burger of all Time (MSBOAT)">
+                <div class="item-name">Most Special Burger of all Time (MSBOAT)</div>
+            </div>
+            <div class="item">
+                <img src="Screenshot_2024-04-02-09-35-53-49_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" alt="Most Special Pizza of all Time (MSPOAT)">
+                <div class="item-name">Most Special Pizza of all Time (MSPOAT)</div>
+            </div>
+            <div class="item">
+                <img src="Screenshot_2024-04-02-09-36-24-30_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" alt="Veg Biryani (Pulao)">
+                <div class="item-name">Veg Biryani (Pulao)</div>
+            </div>
+            <div class="item">
+                <img src="Screenshot_2024-04-02-09-37-13-37_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" alt="Chicken Biryani">
+                <div class="item-name">Chicken Biryani</div>
+            </div>
+            <div class="item">
+                <img src="Screenshot_2024-04-02-09-37-42-73_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" alt="Aloo Tikki Chaat">
+                <div class="item-name">Aloo Tikki Chaat</div>
+            </div>
+            <div class="item">
+                <img src="Screenshot_2024-04-02-09-38-23-10_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" alt="Golgappe (10 piece)">
+                <div class="item-name">Golgappe (10 piece)</div>
+            </div>
         </div>
-        <div class="menu-category">
-            <h2>Extreme Spicy</h2>
-            <ul>
-                <li class="menu-item">
-                    <input type="checkbox" id="extremeSpicy1" class="menu-checkbox">
-                    <label for="extremeSpicy1">
-                        <img src="https://images.app.goo.gl/aSjsi6PBW9P591z27" alt="Hellfire Burger">
-                        Hellfire Burger
-                    </label>
-                </li>
-                <li class="menu-item">
-                    <input type="checkbox" id="extremeSpicy2" class="menu-checkbox">
-                    <label for="extremeSpicy2">
-                        <img src="https://images.app.goo.gl/aSjsi6PBW9P591z27" alt="Devil's Breath Pizza">
-                        Devil's Breath Pizza
-                    </label>
-                </li>
-                <li class="menu-item">
-                    <input type="checkbox" id="extremeSpicy3" class="menu-checkbox">
-                    <label for="extremeSpicy3">
-                        <img src="https://images.app.goo.gl/aSjsi6PBW9P591z27" alt="Lava Lurker's Chili">
-                        Lava Lurker's Chili
-                    </label>
-                </li>
-            </ul>
-        </div>
-        <div class="menu-category">
-            <h2>Desserts</h2>
-            <ul>
-                <li class="menu-item">
-                    <input type="checkbox" id="dessert1" class="menu-checkbox">
-                    <label for="dessert1">
-                        <img src="https://images.app.goo.gl/hf3jjMdQ4zRVrHMd8" alt="Gulab Jamun">
-                        Gulab Jamun
-                    </label>
-                </li>
-                <li class="menu-item">
-                    <input type="checkbox" id="dessert2" class="menu-checkbox">
-                    <label for="dessert2">
-                        <img src="https://images.app.goo.gl/hf3jjMdQ4zRVrHMd8" alt="Sticky Toffee Pudding">
-                        Sticky Toffee Pudding
-                    </label>
-                </li>
-                <li class="menu-item">
-                    <input type="checkbox" id="dessert3" class="menu-checkbox">
-                    <label for="dessert3">
-                        <img src="https://images.app.goo.gl/hf3jjMdQ4zRVrHMd8" alt="Eton Mess">
-                        Eton Mess
-                    </label>
-                </li>
-            </ul>
-        </div>
-    </section>
-
-    <button id="place-order-button" onclick="placeOrder()">Place Order</button>
-
-    <script>
-        function toggleMenu() {
-            var menu = document.getElementById("menu");
-            if (menu.style.display === "block") {
-                menu.style.display = "none";
-            } else {
-                menu.style.display = "block";
-            }
-        }
-
-        function placeOrder() {
-            var selectedItems = document.querySelectorAll('.menu-checkbox:checked');
-            var orderMessage = "Order:\n";
-            selectedItems.forEach(function(item) {
-                orderMessage += "- " + item.nextSibling.textContent.trim() + "\n";
-            });
-            var whatsappURL = "https://wa.me/8178565494?text=" + encodeURIComponent(orderMessage);
-            window.open(whatsappURL, "_blank");
-        }
-    </script>
+    </div>
 </body>
-</html>
+                    </html>
+                    
