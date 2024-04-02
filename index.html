@@ -3,21 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Restaurant Homepage</title>
+    <title>Jaiswal Restaurant</title>
     <style>
-        /* Add your CSS styles here */
+        /* CSS styles */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f0f0f0; /* Default background color */
-            animation: changeColor 5s infinite alternate; /* Animation for changing background color */
-        }
-
-        @keyframes changeColor {
-            0% { background-color: #f0f0f0; }
-            50% { background-color: #ffcc00; }
-            100% { background-color: #f0f0f0; }
+            background-color: #f0f0f0;
         }
 
         .container {
@@ -41,6 +34,9 @@
             flex-basis: 200px;
             margin: 10px;
             text-align: center;
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 10px;
         }
 
         .item img {
@@ -53,116 +49,188 @@
             margin-top: 5px;
             font-weight: bold;
         }
+
+        .item-price {
+            margin-top: 5px;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="search-bar">
-            <input type="text" placeholder="Search...">
+            <input type="text" id="searchInput" placeholder="Search...">
         </div>
         <div class="items">
+            <!-- Item 1 -->
             <div class="item">
                 <img src="Screenshot_2024-04-02-09-18-42-87_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" alt="Cheese Cake">
                 <div class="item-name">Cheese Cake</div>
+                <div class="item-price">Price: ₹140</div>
             </div>
+            <!-- Item 2 -->
             <div class="item">
                 <img src="Screenshot_2024-04-02-09-19-32-33_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" alt="Chocolate Shake">
                 <div class="item-name">Chocolate Shake</div>
+                <div class="item-price">Price: ₹160</div>
             </div>
+            <!-- Item 3 -->
             <div class="item">
-                <img src="Screenshot_2024-04-02-09-20-42-58_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" alt="Double Cheese Burger">
-                <div class="item-name">Double Cheese Burger</div>
+                <img src="Screenshot_2024-04-02-09-20-42-58_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" alt="Double Cheese burger">
+                <div class="item-name">Double Cheese burger</div>
+                <div class="item-price">Price: ₹90</div>
             </div>
+            <!-- Add more items here -->
+            <!-- Item 4 -->
             <div class="item">
                 <img src="Screenshot_2024-04-02-09-21-56-81_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" alt="Double Cheese Pizza">
                 <div class="item-name">Double Cheese Pizza</div>
+                <div class="item-price">Price: ₹180</div>
             </div>
+            <!-- Item 5 -->
             <div class="item">
-                <img src="Screenshot_2024-04-02-09-23-46-89_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" alt="Special Vanilla Ice Cream">
-                <div class="item-name">Special Vanilla Ice Cream</div>
+                <img src="Screenshot_2024-04-02-09-23-46-89_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" alt="Special Vanila Ice Cream">
+                <div class="item-name">Special Vanila Ice Cream</div>
+                <div class="item-price">Price: ₹130</div>
             </div>
+            <!-- Item 6 -->
             <div class="item">
                 <img src="Screenshot_2024-04-02-09-24-35-13_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" alt="Butter Naan">
                 <div class="item-name">Butter Naan</div>
+                <div class="item-price">Price: ₹25</div>
             </div>
+            <!-- Item 7 -->
             <div class="item">
                 <img src="Screenshot_2024-04-02-09-25-02-55_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" alt="Tandoori Naan">
                 <div class="item-name">Tandoori Naan</div>
+                <div class="item-price">Price: ₹30</div>
             </div>
+            <!-- Item 8 -->
             <div class="item">
                 <img src="Screenshot_2024-04-02-09-26-18-42_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" alt="Special Cheese French Fries">
                 <div class="item-name">Special Cheese French Fries</div>
+                <div class="item-price">Price: ₹105</div>
             </div>
+            <!-- Item 9 -->
             <div class="item">
                 <img src="Screenshot_2024-04-02-09-27-03-89_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" alt="French Fries">
                 <div class="item-name">French Fries</div>
+                <div class="item-price">Price: ₹85</div>
             </div>
+            <!-- Item 10 -->
             <div class="item">
                 <img src="Screenshot_2024-04-02-09-27-33-03_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" alt="Veg Noodles">
                 <div class="item-name">Veg Noodles</div>
+                <div class="item-price">Price: ₹65</div>
             </div>
+            <!-- Item 11 -->
             <div class="item">
-                <img src="Screenshot_2024-04-02-09-28-18-57_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" alt="Hakka Noodles">
+                <img src="64_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" alt="Hakka Noodles">
                 <div class="item-name">Hakka Noodles</div>
+                <div class="item-price">Price: ₹75</div>
             </div>
+            <!-- Item 12 -->
             <div class="item">
-                <img src="Screenshot_2024-04-02-09-29-21-77_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" alt="Chilli Potato">
+                <img src="Screenshot_2024-04-02-09-28-18-57_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" alt="Chilli Potato">
                 <div class="item-name">Chilli Potato</div>
+                <div class="item-price">Price: ₹125</div>
             </div>
+            <!-- Item 13 -->
             <div class="item">
-                <img src="Screenshot_2024-04-02-09-29-56-04_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" alt="Special Chilli Cheese Potato">
+                <img src="Screenshot_2024-04-02-09-29-21-77_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" alt="Special Chilli Cheese Potato">
                 <div class="item-name">Special Chilli Cheese Potato</div>
+                <div class="item-price">Price: ₹155</div>
             </div>
+            <!-- Item 14 -->
             <div class="item">
-                <img src="Screenshot_2024-04-02-09-30-31-45_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" alt="Strawberry Milkshake">
+                <img src="Screenshot_2024-04-02-09-29-56-04_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" alt="Strawberry Milkshake">
                 <div class="item-name">Strawberry Milkshake</div>
+                <div class="item-price">Price: ₹135</div>
             </div>
+            <!-- Item 15 -->
             <div class="item">
-                <img src="Screenshot_2024-04-02-09-31-11-79_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" alt="Banana Milkshake">
+                <img src="Screenshot_2024-04-02-09-30-31-45_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" alt="Banana Milkshake">
                 <div class="item-name">Banana Milkshake</div>
+                <div class="item-price">Price: ₹135</div>
             </div>
+            <!-- Item 16 -->
             <div class="item">
-                <img src="Screenshot_2024-04-02-09-31-40-98_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" alt="Lemonade">
+                <img src="Screenshot_2024-04-02-09-31-11-79_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" alt="Lemonade">
                 <div class="item-name">Lemonade</div>
+                <div class="item-price">Price: ₹125</div>
             </div>
+            <!-- Item 17 -->
             <div class="item">
-                <img src="Screenshot_2024-04-02-09-32-07-06_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" alt="Veg Kebab">
+                <img src="Screenshot_2024-04-02-09-31-40-98_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" alt="Veg Kebab">
                 <div class="item-name">Veg Kebab</div>
+                <div class="item-price">Price: ₹99</div>
             </div>
+            <!-- Item 18 -->
             <div class="item">
-                <img src="Screenshot_2024-04-02-09-33-04-61_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" alt="Special Kebab">
+                <img src="Screenshot_2024-04-02-09-32-07-06_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" alt="Special Kebab">
                 <div class="item-name">Special Kebab</div>
+                <div class="item-price">Price: ₹149</div>
             </div>
+            <!-- Item 19 -->
             <div class="item">
-                <img src="Screenshot_2024-04-02-09-34-16-52_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" alt="Special Veg Pattie">
+                <img src="Screenshot_2024-04-02-09-33-04-61_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" alt="Special Veg Pattie">
                 <div class="item-name">Special Veg Pattie</div>
+                <div class="item-price">Price: ₹65</div>
             </div>
+            <!-- Item 20 -->
             <div class="item">
-                <img src="Screenshot_2024-04-02-09-35-09-83_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" alt="Most Special Burger of all Time (MSBOAT)">
+                <img src="Screenshot_2024-04-02-09-34-16-52_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" alt="Most Special Burger of all Time (MSBOAT)">
                 <div class="item-name">Most Special Burger of all Time (MSBOAT)</div>
+                <div class="item-price">Price: ₹199</div>
             </div>
+            <!-- Item 21 -->
             <div class="item">
-                <img src="Screenshot_2024-04-02-09-35-53-49_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" alt="Most Special Pizza of all Time (MSPOAT)">
+                <img src="Screenshot_2024-04-02-09-35-09-83_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" alt="Most Special Pizza of all Time (MSPOAT)">
                 <div class="item-name">Most Special Pizza of all Time (MSPOAT)</div>
+                <div class="item-price">Price: ₹349</div>
             </div>
+            <!-- Item 22 -->
             <div class="item">
-                <img src="Screenshot_2024-04-02-09-36-24-30_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" alt="Veg Biryani (Pulao)">
-                <div class="item-name">Veg Biryani (Pulao)</div>
+                <img src="Screenshot_2024-04-02-09-35-53-49_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" alt="Veg biryani (Pulao)">
+                <div class="item-name">Veg biryani (Pulao)</div>
+                <div class="item-price">Price: ₹135</div>
             </div>
+            <!-- Item 23 -->
             <div class="item">
-                <img src="Screenshot_2024-04-02-09-37-13-37_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" alt="Chicken Biryani">
+                <img src="Screenshot_2024-04-02-09-36-24-30_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" alt="Chicken Biryani">
                 <div class="item-name">Chicken Biryani</div>
+                <div class="item-price">Price: ₹185</div>
             </div>
+            <!-- Item 24 -->
             <div class="item">
-                <img src="Screenshot_2024-04-02-09-37-42-73_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" alt="Aloo Tikki Chaat">
-                <div class="item-name">Aloo Tikki Chaat</div>
+                <img src="Screenshot_2024-04-02-09-37-13-37_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" alt="Aalo Tikki Chat">
+                <div class="item-name">Aalo Tikki Chat</div>
+                <div class="item-price">Price: ₹99</div>
             </div>
+            <!-- Item 25 -->
             <div class="item">
-                <img src="Screenshot_2024-04-02-09-38-23-10_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" alt="Golgappe (10 piece)">
+                <img src="Screenshot_2024-04-02-09-37-42-73_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" alt="Golgappe (10 piece)">
                 <div class="item-name">Golgappe (10 piece)</div>
+                <div class="item-price">Price: ₹50</div>
             </div>
         </div>
     </div>
+
+    <script>
+        // JavaScript for filtering items based on search input
+        const items = document.querySelectorAll('.item');
+        const searchInput = document.getElementById('searchInput');
+
+        searchInput.addEventListener('input', function() {
+            const searchTerm = this.value.toLowerCase();
+            items.forEach(item => {
+                const itemName = item.querySelector('.item-name').textContent.toLowerCase();
+                if (itemName.includes(searchTerm)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+    </script>
 </body>
-                    </html>
-                    
+</html>
