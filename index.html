@@ -3,232 +3,208 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jaiswal Restaurant</title>
+    <title>Jaiswal Dhaba - Authentic Indian Cuisine</title>
     <style>
-        /* CSS styles */
-        body {
-            font-family: Arial, sans-serif;
+        * {
             margin: 0;
             padding: 0;
-            background-color: #f0f0f0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
         }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
+        body {
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
         }
 
-        .search-bar {
-            text-align: center;
-            margin-bottom: 20px;
+        /* Navbar */
+        .navbar {
+            background-color: #d32f2f;
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 100;
         }
 
-        .items {
+        .navbar ul {
+            list-style: none;
             display: flex;
-            flex-wrap: wrap;
             justify-content: center;
+            gap: 2rem;
         }
 
-        .item {
-            flex-basis: 200px;
-            margin: 10px;
-            text-align: center;
-            background-color: #fff;
-            padding: 10px;
-            border-radius: 10px;
-        }
-
-        .item img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-        }
-
-        .item-name {
-            margin-top: 5px;
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
             font-weight: bold;
         }
 
-        .item-price {
-            margin-top: 5px;
+        .navbar a:hover {
+            color: #ffeb3b;
+        }
+
+        /* Sections */
+        .section {
+            padding: 6rem 2rem 2rem;
+            text-align: center;
+        }
+
+        .home {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1517248135467-2c0c');
+            background-size: cover;
+            color: white;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .home h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .home p {
+            font-size: 1.5rem;
+        }
+
+        /* Menu */
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 2rem auto;
+        }
+
+        .menu-item {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .menu-item:hover {
+            transform: scale(1.05);
+        }
+
+        .menu-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .menu-item h3 {
+            font-size: 1.5rem;
+            margin: 1rem 0 0.5rem;
+        }
+
+        .menu-item p {
+            padding: 0 1rem 1rem;
+            font-size: 1rem;
+        }
+
+        .special {
+            color: #d32f2f;
+            font-weight: bold;
+        }
+
+        /* Order Button */
+        .order-btn {
+            display: inline-block;
+            background-color: #25D366;
+            color: white;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            margin-top: 2rem;
+        }
+
+        .order-btn:hover {
+            background-color: #1ebe52;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .navbar ul {
+                flex-direction: column;
+                text-align: center;
+                gap: 1rem;
+            }
+
+            .home h1 {
+                font-size: 2rem;
+            }
+
+            .home p {
+                font-size: 1.2rem;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="search-bar">
-            <input type="text" id="searchInput" placeholder="Search...">
-        </div>
-        <div class="items">
-            <!-- Item 1 -->
-            <div class="item">
-                <img src="Screenshot_2024-04-02-09-18-42-87_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" alt="Cheese Cake">
-                <div class="item-name">Cheese Cake</div>
-                <div class="item-price">Price: ₹140</div>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#order">Order Now</a></li>
+        </ul>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="section home">
+        <h1>Welcome to Jaiswal Dhaba</h1>
+        <p>Savor the taste of authentic Indian cuisine with our signature kebabs!</p>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="section">
+        <h2>Our Menu</h2>
+        <div class="menu-grid">
+            <div class="menu-item">
+                <img src="https://images.unsplash.com/photo-1598515213695-52f1d14e586d" alt="Chicken Kebab">
+                <h3>Chicken Kebab <span class="special">(Specialty)</span></h3>
+                <p>Tender, succulent chicken marinated in aromatic spices, grilled to perfection.</p>
             </div>
-            <!-- Item 2 -->
-            <div class="item">
-                <img src="Screenshot_2024-04-02-09-19-32-33_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" alt="Chocolate Shake">
-                <div class="item-name">Chocolate Shake</div>
-                <div class="item-price">Price: ₹160</div>
+            <div class="menu-item">
+                <img src="https://images.unsplash.com/photo-1603575951928-1c1d4e7d" alt="Mutton Kebab">
+                <h3>Mutton Kebab <span class="special">(Specialty)</span></h3>
+                <p>Juicy mutton pieces seasoned with traditional spices, charred just right.</p>
             </div>
-            <!-- Item 3 -->
-            <div class="item">
-                <img src="Screenshot_2024-04-02-09-20-42-58_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" alt="Double Cheese burger">
-                <div class="item-name">Double Cheese burger</div>
-                <div class="item-price">Price: ₹90</div>
+            <div class="menu-item">
+                <img src="https://images.unsplash.com/photo-1567189718129-1cb6" alt="Paneer Tikka">
+                <h3>Paneer Tikka</h3>
+                <p>Soft paneer cubes marinated in yogurt and spices, grilled for a smoky flavor.</p>
             </div>
-            <!-- Add more items here -->
-            <!-- Item 4 -->
-            <div class="item">
-                <img src="Screenshot_2024-04-02-09-21-56-81_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" alt="Double Cheese Pizza">
-                <div class="item-name">Double Cheese Pizza</div>
-                <div class="item-price">Price: ₹180</div>
-            </div>
-            <!-- Item 5 -->
-            <div class="item">
-                <img src="Screenshot_2024-04-02-09-23-46-89_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" alt="Special Vanila Ice Cream">
-                <div class="item-name">Special Vanila Ice Cream</div>
-                <div class="item-price">Price: ₹130</div>
-            </div>
-            <!-- Item 6 -->
-            <div class="item">
-                <img src="Screenshot_2024-04-02-09-24-35-13_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" alt="Butter Naan">
-                <div class="item-name">Butter Naan</div>
-                <div class="item-price">Price: ₹25</div>
-            </div>
-            <!-- Item 7 -->
-            <div class="item">
-                <img src="Screenshot_2024-04-02-09-25-02-55_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" alt="Tandoori Naan">
-                <div class="item-name">Tandoori Naan</div>
-                <div class="item-price">Price: ₹30</div>
-            </div>
-            <!-- Item 8 -->
-            <div class="item">
-                <img src="Screenshot_2024-04-02-09-26-18-42_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" alt="Special Cheese French Fries">
-                <div class="item-name">Special Cheese French Fries</div>
-                <div class="item-price">Price: ₹105</div>
-            </div>
-            <!-- Item 9 -->
-            <div class="item">
-                <img src="Screenshot_2024-04-02-09-27-03-89_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" alt="French Fries">
-                <div class="item-name">French Fries</div>
-                <div class="item-price">Price: ₹85</div>
-            </div>
-            <!-- Item 10 -->
-            <div class="item">
-                <img src="Screenshot_2024-04-02-09-27-33-03_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" alt="Veg Noodles">
-                <div class="item-name">Veg Noodles</div>
-                <div class="item-price">Price: ₹65</div>
-            </div>
-            <!-- Item 11 -->
-            <div class="item">
-                <img src="64_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" alt="Hakka Noodles">
-                <div class="item-name">Hakka Noodles</div>
-                <div class="item-price">Price: ₹75</div>
-            </div>
-            <!-- Item 12 -->
-            <div class="item">
-                <img src="Screenshot_2024-04-02-09-28-18-57_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" alt="Chilli Potato">
-                <div class="item-name">Chilli Potato</div>
-                <div class="item-price">Price: ₹125</div>
-            </div>
-            <!-- Item 13 -->
-            <div class="item">
-                <img src="Screenshot_2024-04-02-09-29-21-77_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" alt="Special Chilli Cheese Potato">
-                <div class="item-name">Special Chilli Cheese Potato</div>
-                <div class="item-price">Price: ₹155</div>
-            </div>
-            <!-- Item 14 -->
-            <div class="item">
-                <img src="Screenshot_2024-04-02-09-29-56-04_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" alt="Strawberry Milkshake">
-                <div class="item-name">Strawberry Milkshake</div>
-                <div class="item-price">Price: ₹135</div>
-            </div>
-            <!-- Item 15 -->
-            <div class="item">
-                <img src="Screenshot_2024-04-02-09-30-31-45_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" alt="Banana Milkshake">
-                <div class="item-name">Banana Milkshake</div>
-                <div class="item-price">Price: ₹135</div>
-            </div>
-            <!-- Item 16 -->
-            <div class="item">
-                <img src="Screenshot_2024-04-02-09-31-11-79_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" alt="Lemonade">
-                <div class="item-name">Lemonade</div>
-                <div class="item-price">Price: ₹125</div>
-            </div>
-            <!-- Item 17 -->
-            <div class="item">
-                <img src="Screenshot_2024-04-02-09-31-40-98_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" alt="Veg Kebab">
-                <div class="item-name">Veg Kebab</div>
-                <div class="item-price">Price: ₹99</div>
-            </div>
-            <!-- Item 18 -->
-            <div class="item">
-                <img src="Screenshot_2024-04-02-09-32-07-06_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" alt="Special Kebab">
-                <div class="item-name">Special Kebab</div>
-                <div class="item-price">Price: ₹149</div>
-            </div>
-            <!-- Item 19 -->
-            <div class="item">
-                <img src="Screenshot_2024-04-02-09-33-04-61_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" alt="Special Veg Pattie">
-                <div class="item-name">Special Veg Pattie</div>
-                <div class="item-price">Price: ₹65</div>
-            </div>
-            <!-- Item 20 -->
-            <div class="item">
-                <img src="Screenshot_2024-04-02-09-34-16-52_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" alt="Most Special Burger of all Time (MSBOAT)">
-                <div class="item-name">Most Special Burger of all Time (MSBOAT)</div>
-                <div class="item-price">Price: ₹199</div>
-            </div>
-            <!-- Item 21 -->
-            <div class="item">
-                <img src="Screenshot_2024-04-02-09-35-09-83_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" alt="Most Special Pizza of all Time (MSPOAT)">
-                <div class="item-name">Most Special Pizza of all Time (MSPOAT)</div>
-                <div class="item-price">Price: ₹349</div>
-            </div>
-            <!-- Item 22 -->
-            <div class="item">
-                <img src="Screenshot_2024-04-02-09-35-53-49_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" alt="Veg biryani (Pulao)">
-                <div class="item-name">Veg biryani (Pulao)</div>
-                <div class="item-price">Price: ₹135</div>
-            </div>
-            <!-- Item 23 -->
-            <div class="item">
-                <img src="Screenshot_2024-04-02-09-36-24-30_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" alt="Chicken Biryani">
-                <div class="item-name">Chicken Biryani</div>
-                <div class="item-price">Price: ₹185</div>
-            </div>
-            <!-- Item 24 -->
-            <div class="item">
-                <img src="Screenshot_2024-04-02-09-37-13-37_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" alt="Aalo Tikki Chat">
-                <div class="item-name">Aalo Tikki Chat</div>
-                <div class="item-price">Price: ₹99</div>
-            </div>
-            <!-- Item 25 -->
-            <div class="item">
-                <img src="Screenshot_2024-04-02-09-37-42-73_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" alt="Golgappe (10 piece)">
-                <div class="item-name">Golgappe (10 piece)</div>
-                <div class="item-price">Price: ₹50</div>
+            <div class="menu-item">
+                <img src="https://images.unsplash.com/photo-1604902614056-3" alt="Butter Chicken">
+                <h3>Butter Chicken</h3>
+                <p>Creamy tomato-based curry with tender chicken, rich and flavorful.</p>
             </div>
         </div>
-    </div>
+    </section>
+
+    <!-- Order Section -->
+    <section id="order" class="section">
+        <h2>Order Now</h2>
+        <p>Ready to enjoy our delicious food? Click below to place your order!</p>
+        <a href="https://wa.me/918178565494?text=Hi%20Jaiswal%20Dhaba,%20I'd%20like%20to%20place%20an%20order!" 
+           class="order-btn" target="_blank">Order on WhatsApp</a>
+    </section>
 
     <script>
-        // JavaScript for filtering items based on search input
-        const items = document.querySelectorAll('.item');
-        const searchInput = document.getElementById('searchInput');
-
-        searchInput.addEventListener('input', function() {
-            const searchTerm = this.value.toLowerCase();
-            items.forEach(item => {
-                const itemName = item.querySelector('.item-name').textContent.toLowerCase();
-                if (itemName.includes(searchTerm)) {
-                    item.style.display = 'block';
-                } else {
-                    item.style.display = 'none';
-                }
+        // Smooth scrolling for navbar links
+        document.querySelectorAll('.navbar a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const section = document.querySelector(this.getAttribute('href'));
+                section.scrollIntoView({ behavior: 'smooth' });
             });
         });
     </script>
